@@ -1,1 +1,5 @@
-git add git-add alacritty bashrc dunst godot i3 nvim polybar ranger readme rofi wallpaper
+#!/bin/bash
+
+# I use this to add specific files because I dont want them all uploaded
+
+git add git-add .gitignore alacritty bashrc dunst godot i3 nvim polybar ranger rofi wallpaper
