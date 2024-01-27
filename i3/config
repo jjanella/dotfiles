@@ -41,8 +41,8 @@ exec_always --no-startup-id pkill polybar; polybar
 
 
 default_border none
-gaps inner 10
-gaps outer 0
+#gaps inner 10
+#gaps outer 0
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
