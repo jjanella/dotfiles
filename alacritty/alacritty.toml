@@ -2,7 +2,7 @@ import=["<string>"]
 
 [window]
 opacity = 1.0
-decorations = "None"
+#decorations = "None"
 
 [colors.normal]
 green = "#00ff00"
