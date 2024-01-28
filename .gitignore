@@ -1,1 +1,15 @@
-godot/recent_dirs
+# Ignore everything https://jasonstitt.com/gitignore-whitelisting-patterns
+/*
+
+# Keep this file
+!/.gitignore
+
+# Keep these dirs and files
+!/alacritty/
+!/bashrc
+!/dunst/
+!/i3/
+!/nvim/
+!/polybar/
+!/rofi/
+!/wallpaper
