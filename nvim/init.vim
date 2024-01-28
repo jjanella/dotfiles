@@ -15,8 +15,9 @@ set conceallevel=1
 let g:tex_conceal='abdmg'
 highlight clear Conceal
 
-" Shortcut to trigger VimtexView
-map o <plug>(vimtex-view)
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 
 Plug 'sirver/ultisnips'
 let g:UltiSnipsExpandTrigger = '<tab>'
@@ -24,10 +25,14 @@ let g:UltiSnipsJumpForwardTrigger = '<tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "ultisnips"]
 
-function! Synctex()
-        " remove 'silent' for debugging
-        execute "silent !zathura --synctex-forward " . line('.') . ":" . col('.') . ":" . bufname('%') . " " . g:syncpdf
-endfunction
-map <C-enter> :call Synctex()<cr>
+" Defunct atm
+"function! Synctex()
+"        " remove 'silent' for debugging
+"        execute "silent !zathura --synctex-forward " . line('.') . ":" . col('.') . ":" . bufname('%') . " " . g:syncpdf
+"endfunction
+"map <C-enter> :call Synctex()<cr>
+
+"map o <plug>(vimtex-view)
+
 
 call plug#end()
