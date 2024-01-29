@@ -1,10 +1,9 @@
-snippet box "Box"
+snippet box "Box" b
 `!p snip.rv = '┌' + '─' * (len(t[1]) + 2) + '┐'`
-│ $1 │
+│ \bold${1: box name}** $2 │
 `!p snip.rv = '└' + '─' * (len(t[1]) + 2) + '┘'`
 $0
 endsnippet
-
 
 snippet beg "begin{} / end{}" bA
 \begin{$1}
@@ -25,7 +24,7 @@ _{$1}$0
 endsnippet
 
 snippet '([A-Za-z])(\d)' "auto subscript" wrA
-`!p snip.rv = match.group(1)`_{`!p snip.rv = match.group(2)`}
+`!p snip.rv = match.group(1)`_`!p snip.rv = match.group(2)`
 endsnippet
 
 snippet '([A-Za-z])_(\d\d)' "auto subscript2" wrA
@@ -54,3 +53,16 @@ snippet dm "Math" wA
 $1
 .\] $0
 endsnippet
+
+snippet bb "Fancy Math" wA
+\mathbb{$1} $0
+endsnippet
+
+snippet in "In" w
+\in $0
+endsnippet
+
+snippet eof "Element of" wA
+\in\mathbb{$0}$1 
+endsnippet
+

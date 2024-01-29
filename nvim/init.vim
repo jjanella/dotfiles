@@ -5,7 +5,9 @@ set number
 
 filetype plugin indent on
 
+
 call plug#begin()
+
 
 Plug 'lervag/vimtex'
 let g:tex_flavor='latex'
@@ -25,14 +27,8 @@ let g:UltiSnipsJumpForwardTrigger = '<tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "ultisnips"]
 
-" Defunct atm
-"function! Synctex()
-"        " remove 'silent' for debugging
-"        execute "silent !zathura --synctex-forward " . line('.') . ":" . col('.') . ":" . bufname('%') . " " . g:syncpdf
-"endfunction
-"map <C-enter> :call Synctex()<cr>
+nmap <c-o> <Plug>(vimtex-compile)
 
-"map o <plug>(vimtex-view)
 
 
 call plug#end()

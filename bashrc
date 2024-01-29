@@ -2,6 +2,8 @@
 # ~/.bashrc
 #
 
+
+
 [[ $- != *i* ]] && return
 
 colors() {

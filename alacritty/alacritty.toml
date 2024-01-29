@@ -4,6 +4,9 @@ import=["<string>"]
 opacity = 1.0
 #decorations = "None"
 
+[colors.primary]
+background= "#121212"
+
 [colors.normal]
 green = "#00ff00"
 yellow = "#e29d1c"
