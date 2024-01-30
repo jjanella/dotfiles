@@ -3,6 +3,8 @@ set softtabstop=2
 set shiftwidth=2
 set number
 
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+
 filetype plugin indent on
 
 
