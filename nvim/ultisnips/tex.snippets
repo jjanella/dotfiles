@@ -15,8 +15,8 @@ snippet today "Date"
 `date +%F`
 endsnippet
 
-snippet // "Fraction"
-\frac{$1}{$2}$0
+snippet // "Fraction" A
+\frac{$1}{$2} $0
 endsnippet
 
 snippet '([A-Za-z])(\d)' "auto subscript" wr
@@ -28,7 +28,7 @@ snippet '([A-Za-z])_(\d\d)' "auto subscript2" wr
 endsnippet
 
 snippet summ "Sum" wA
-\sum\limit_{$1}^{$2} $0
+\sum_{$1}^{$2} $0
 endsnippet
 
 snippet limm "Limit" wA
@@ -83,10 +83,10 @@ snippet exin "Exists _ in _" wA
 endsnippet
 
 snippet hline "Horizontal Line" bA
-\\\hline\\
+\\\\\hline\\\\
 endsnippet
 
-snippet setup "Setup a new file" bw
+snippet init "Setup a new file" bw
 \documentclass{article}
 
 \pagestyle{plain}
@@ -109,4 +109,18 @@ $2
 
 $0
 
+endsnippet
+
+snippet del "Delta" wA
+\Delta $0
+endsnippet
+
+snippet te "Text" w
+\text{$1} $0
+endsnippet
+
+snippet align "Align a new equation" bA
+\begin{align*}
+$0
+\end{align*}
 endsnippet

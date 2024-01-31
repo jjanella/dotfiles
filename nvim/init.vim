@@ -4,6 +4,10 @@ set shiftwidth=2
 set number
 
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+noremap <silent> <C-W>          :update<CR>
+vnoremap <silent> <C-W>         <C-C>:update<CR>
+inoremap <silent> <C-W>         <C-O>:update<CR>
+
 
 filetype plugin indent on
 
