@@ -16,6 +16,8 @@ filetype plugin indent on
 
 call plug#begin()
 
+" Code stats
+Plug 'wakatime/vim-wakatime'
 
 Plug 'lervag/vimtex'
 let g:tex_flavor='latex'
