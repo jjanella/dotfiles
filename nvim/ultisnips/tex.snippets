@@ -89,15 +89,18 @@ snippet ex "There Exists" w
 endsnippet
 
 snippet hline "Horizontal Line" bA
-`echo "~\\\\\hline\\\\"`
+`echo "~\\\\\hline~\\\\"`
 endsnippet
 
 snippet init "Setup a new file" bw
 \documentclass{article}
 
+
 \pagestyle{plain}
 \usepackage[letterpaper,left=6mm,includemp=true,marginparwidth=12mm,marginparsep=1mm,reversemarginpar,right=19mm,includefoot=true,top=19mm,nohead,footskip=12mm,bottom=6mm]{geometry}
 \usepackage{amsmath, amsthm, amssymb}
+\usepackage{graphix}
+\graphicspath{ {./} }
 
 \begin{document}
 
@@ -134,4 +137,16 @@ endsnippet
 
 snippet limsum "Limit SUm" wA
 \lim_{n\to\infty}\sum_{i=1}^n $0
+endsnippet
+
+snippet 'mat([0-9]) ' "Matrix of width n" wrA
+\left[\begin{array}{`!p snip.rv = "c" * int(match.group(1))`$1}
+	$0
+\end{array}\right]
+endsnippet
+
+snippet 'mat..(\S) ' "Matrix up to n" wrA
+\left[\begin{array}{cccc}
+	$1_{1}&$1_{2}&..&$1_{`!p snip.rv = match.group(1)`}\\\\$0
+\end{array}\end]
 endsnippet

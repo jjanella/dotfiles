@@ -78,7 +78,7 @@ tiling_drag modifier titlebar
 
 # start a terminal
 bindsym $mod+Return exec --no-startup-id alacritty
-bindsym Print exec --no-startup-id /home/$USER/docs/scripts/ss # Screenshot tool
+bindsym Print exec --no-startup-id /home/$USER/.config/i3/ss # Screenshot tool
 
 # kill focused window
 bindsym $mod+Shift+q kill

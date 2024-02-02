@@ -14,6 +14,21 @@ set wildignore+=*.pdf,*.png,*.jpg,*.out
 filetype plugin indent on
 
 
+
+function! PrintToTex()
+	" Take the screenshot
+	!~/.config/i3/ss
+
+	" Create the unique filename
+	let l:fname = strftime('%b-%d-%s') 
+
+	" Only works if there is a return value, copy the screenshot to the tex file
+	let _ = system('cp ~/screenshot.png ./' . l:fname . '.png')
+
+	" Tell the tex file to use the screenshot
+	execute "normal i \\includegraphics[width=\\textwidth]{" . l:fname . ".png}"
+endfunction
+
 call plug#begin()
 
 " Code stats
