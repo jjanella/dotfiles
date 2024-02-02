@@ -1,5 +1,8 @@
 # Ignore everything https://jasonstitt.com/gitignore-whitelisting-patterns
-/*
+*
+
+# Descend into directories
+!*/
 
 # Keep this file
 !/.gitignore

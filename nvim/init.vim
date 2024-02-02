@@ -8,12 +8,16 @@ noremap <silent> <C-W>          :update<CR>
 vnoremap <silent> <C-W>         <C-C>:update<CR>
 inoremap <silent> <C-W>         <C-O>:update<CR>
 
+" Dont tab-complete these files
+set wildignore+=*.pdf,*.png,*.jpg,*.out
 
 filetype plugin indent on
 
 
 call plug#begin()
 
+" Code stats
+Plug 'wakatime/vim-wakatime'
 
 Plug 'lervag/vimtex'
 let g:tex_flavor='latex'

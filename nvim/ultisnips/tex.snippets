@@ -29,12 +29,24 @@ snippet '([A-Za-z])_(\d\d)' "auto subscript2" wr
 `!p snip.rv = match.group(1)`_{`!p snip.rv = match.group(2)`} $0
 endsnippet
 
-snippet summ "Sum" wA
-\sum_{$1}^{$2} $0
+snippet sum "Sum" w
+\sum_{i=1$1}^{n$2} $0
 endsnippet
 
-snippet limm "Limit" wA
-\lim_{n \to \infty}
+snippet lim "Limit" w
+\lim_{n \to \infty$1} $0
+endsnippet
+
+snippet limsum "Limit of a sum" w  
+\lim_{n\to\infty}\sum_{i=$1}^n $0
+endsnippet
+
+snippet int "Integral" w
+\int_{$1}^{$2} $3 dx $0
+endsnippet
+
+snippet '(\S)\^-' "Inverse" Ar
+`!p snip.rv = match.group(1)`^{-$1} $0
 endsnippet
 
 snippet oo "Infinity" wA
@@ -60,32 +72,24 @@ snippet bb "Fancy Math" wA
 \mathbb{$1} $0
 endsnippet
 
-snippet inn "In" wA
+snippet in "In" w
 \in $0
 endsnippet
 
-snippet eR "Element of Reals" wA
-\in\mathbb{R} $0 
+snippet 'e([A-Z])' "Element of Reals" wrA
+\in\mathbb{`!p snip.rv = match.group(1)`} $0 
 endsnippet
 
-snippet faa "For all" wA
+snippet fa "For all" w
 \forall $0
 endsnippet
 
-snippet exx "There Exists" wA
+snippet ex "There Exists" w
 \exists $0
 endsnippet
 
-snippet fain "For all x in R" wA
-\forall $1 \in\mathbb{$2} $0
-endsnippet
-
-snippet exin "Exists _ in _" wA
-\exists $1 \in\mathbb{$2} $0
-endsnippet
-
 snippet hline "Horizontal Line" bA
-\\\\\hline\\\\
+`echo "~\\\\\hline\\\\"`
 endsnippet
 
 snippet init "Setup a new file" bw
@@ -93,6 +97,7 @@ snippet init "Setup a new file" bw
 
 \pagestyle{plain}
 \usepackage[letterpaper,left=6mm,includemp=true,marginparwidth=12mm,marginparsep=1mm,reversemarginpar,right=19mm,includefoot=true,top=19mm,nohead,footskip=12mm,bottom=6mm]{geometry}
+\usepackage{amsmath, amsthm, amssymb}
 
 \begin{document}
 
