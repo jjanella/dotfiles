@@ -9,7 +9,7 @@ vnoremap <silent> <C-W>         <C-C>:update<CR>
 inoremap <silent> <C-W>         <C-O>:update<CR>
 
 " Dont tab-complete these files
-set wildignore+=*.pdf,*.png,*.jpg,*.out
+"set wildignore+=*.pdf,*.png,*.jpg,*.out
 
 filetype plugin indent on
 
@@ -46,11 +46,10 @@ let g:tex_conceal='abdmg'
 highlight clear Conceal
 
 
-function! CompileTex()
-	":<Plug>(vimtex-compile)
-	VimtexCompile
+"function! CompileTex()
+	":VimtexCompile
 	":! rm *.fls *.aux *.fdb_latexmk *.log *.gz
-endfunction
+"endfunction
 
 
 
@@ -63,7 +62,7 @@ let g:UltiSnipsJumpForwardTrigger = '<tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "ultisnips"]
 
-nmap <c-o> :call CompileTex()<CR>
+nmap <c-o> <Plug>(vimtex-compile)
 nmap <c-p> :call PrintToTex()<CR>
 
 
