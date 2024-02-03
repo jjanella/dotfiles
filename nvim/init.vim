@@ -29,7 +29,10 @@ function! PrintToTex()
 	execute "normal i \\includegraphics[width=\\textwidth]{" . l:fname . ".png}"
 endfunction
 
+
 call plug#begin()
+
+
 
 " Code stats
 Plug 'wakatime/vim-wakatime'
@@ -38,9 +41,17 @@ Plug 'lervag/vimtex'
 let g:tex_flavor='latex'
 let g:vimtex_view_method='zathura'
 let g:vimtex_quickfix_mode=0
-set conceallevel=1
+set conceallevel=0
 let g:tex_conceal='abdmg'
 highlight clear Conceal
+
+
+function! CompileTex()
+	":<Plug>(vimtex-compile)
+	VimtexCompile
+	":! rm *.fls *.aux *.fdb_latexmk *.log *.gz
+endfunction
+
 
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -52,8 +63,11 @@ let g:UltiSnipsJumpForwardTrigger = '<tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "ultisnips"]
 
-nmap <c-o> <Plug>(vimtex-compile)
+nmap <c-o> :call CompileTex()<CR>
+nmap <c-p> :call PrintToTex()<CR>
 
 
 
 call plug#end()
+
+
