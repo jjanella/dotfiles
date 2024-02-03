@@ -8,12 +8,12 @@
 !/.gitignore
 
 # Keep these dirs and files
-!/alacritty/
+!/alacritty/**
 !/bashrc
-!/dunst/
-!/i3/
-!/nvim/
-!/polybar/
-!/rofi/
+!/dunst/**
+!/i3/**
+!/nvim/**
+!/polybar/**
+!/rofi/**
 !/wallpaper
-!/zathura/
+!/zathura/**
