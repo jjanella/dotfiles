@@ -26,7 +26,7 @@ function! PrintToTex()
 	let _ = system('cp ~/screenshot.png ./' . l:fname . '.png')
 
 	" Tell the tex file to use the screenshot
-	execute "normal i \\includegraphics[width=\\textwidth]{" . l:fname . ".png}"
+	execute "normal i \\noindent\\includegraphics[width=\\textwidth]{" . l:fname . ".png}"
 endfunction
 
 
