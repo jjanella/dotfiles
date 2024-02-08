@@ -5,8 +5,6 @@ snippet box "Box" b
 $0
 endsnippet
 
-
-
 snippet beg "begin{} / end{}" bA
 \begin{$1}
 	$0
@@ -34,7 +32,7 @@ snippet sum "Sum" w
 endsnippet
 
 snippet lim "Limit" w
-\lim_{n \to \infty$1} $0
+\lim_{$1\to $2}$0
 endsnippet
 
 snippet limsum "Limit of a sum" w  
@@ -42,7 +40,7 @@ snippet limsum "Limit of a sum" w
 endsnippet
 
 snippet int "Integral" w
-\int_{$1}^{$2} $3 dx $0
+\int_{$1}^{$2}$0
 endsnippet
 
 snippet '(\S)\^-' "Inverse" Ar
@@ -50,7 +48,7 @@ snippet '(\S)\^-' "Inverse" Ar
 endsnippet
 
 snippet oo "Infinity" wA
-\infty $0
+\infty$0
 endsnippet
 
 snippet mk "Math" wA
@@ -63,20 +61,19 @@ else:
 endsnippet
 
 snippet dm "Math" wA
-\[
-$1
-.\] $0
+\[$1\]
+$0
 endsnippet
 
 snippet bb "Fancy Math" wA
 \mathbb{$1} $0
 endsnippet
 
-snippet in "In" w
-\in $0
+snippet 'in' "In" wr
+\in$0
 endsnippet
 
-snippet 'e([A-Z])' "Element of Reals" wrA
+snippet 'e([A-Z])' "Element of Char" wrA
 \in\mathbb{`!p snip.rv = match.group(1)`} $0 
 endsnippet
 
@@ -112,13 +109,9 @@ $0
 endsnippet
 
 snippet title "Define a title" bA
-\begin{center}
-{\large \bf \underline{$1}}
-$2
-\end{center}
+\begin{center}{\large \bf \underline{$1}}\end{center}
 
 $0
-
 endsnippet
 
 snippet del "Delta" wA
@@ -155,10 +148,18 @@ snippet sqrt "Square root"
 \sqrt{$1}$0
 endsnippet
 
-snippet '(.^\s*)/(.^\s*)' "Fraction" r
- \frac{`!p snip.rv = match.group(1)`}{`!p snip.rv = match.group(2)`}$0
+snippet '(\S*)/(\S*)' "Fraction" wr
+\frac{`!p snip.rv = match.group(1)`}{`!p snip.rv = match.group(2)`}$0
 endsnippet
 
 snippet 'pi' "Pi" r
 \pi
+endsnippet
+
+snippet to "To" 
+\to
+endsnippet
+
+snippet 'dd([A-Za-z])' "d/dx" wrA
+\frac{d}{d`!p snip.rv = match.group(1)`}$0
 endsnippet
