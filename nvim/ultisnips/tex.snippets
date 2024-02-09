@@ -163,10 +163,14 @@ snippet 'pi' "Pi" r
 \pi
 endsnippet
 
-snippet to "To" 
+snippet 'to' "To" r
 \to
 endsnippet
 
 snippet 'dd([A-Za-z])' "d/dx" wrA
 \frac{d}{d`!p snip.rv = match.group(1)`}$0
+endsnippet
+
+snippet 'vec' "Vec" r
+\vec{$1}$0
 endsnippet
