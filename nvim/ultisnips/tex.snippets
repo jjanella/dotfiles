@@ -135,14 +135,12 @@ $0
 \end{align*}
 endsnippet
 
-snippet limsum "Limit SUm" wA
+snippet limsum "Limit Sum" wA
 \lim_{n\to\infty}\sum_{i=1}^n $0
 endsnippet
 
-snippet 'mat([0-9]) ' "Matrix of width n" wrA
-\left[\begin{array}{`!p snip.rv = "c" * int(match.group(1))`$1}
-	$0
-\end{array}\right]
+snippet 'mat([0-9])' "Matrix of width n" wr
+\left[\begin{array}{`!p snip.rv = "c" * int(match.group(1))`$1}$0\end{array}\right]
 endsnippet
 
 snippet 'mat..(\S) ' "Matrix up to n" wrA
@@ -173,4 +171,12 @@ endsnippet
 
 snippet 'vec' "Vec" r
 \vec{$1}$0
+endsnippet
+
+snippet << "Weird pointed brackets left" A
+\langle
+endsnippet
+
+snippet >> "Weird pointed brackets right" A
+\rangle
 endsnippet
