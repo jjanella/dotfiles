@@ -66,6 +66,11 @@ nmap <c-o> <Plug>(vimtex-compile)
 nmap <c-p> :call PrintToTex()<CR>
 
 
+Plug 'ryanoasis/vim-devicons'
+
+
+Plug 'ap/vim-css-color'
+
 
 call plug#end()
 
