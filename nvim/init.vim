@@ -29,6 +29,8 @@ function! PrintToTex()
 	execute "normal i \\noindent\\includegraphics[width=\\textwidth]{" . l:fname . ".png}"
 endfunction
 
+# So that ultisnips will stop stroking out in venv.
+let g:python3_host_prog = '/usr/bin/python'
 
 call plug#begin()
 
