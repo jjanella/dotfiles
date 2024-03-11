@@ -34,7 +34,8 @@ let g:python3_host_prog = '/usr/bin/python'
 
 call plug#begin()
 
-
+" Pretty
+Plug 'bluz71/vim-moonfly-colors', { 'as': 'moonfly' }
 
 " Code stats
 Plug 'wakatime/vim-wakatime'
@@ -77,3 +78,4 @@ Plug 'ap/vim-css-color'
 call plug#end()
 
 
+colorscheme moonfly
