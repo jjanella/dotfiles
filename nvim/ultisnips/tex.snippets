@@ -98,6 +98,9 @@ snippet init "Setup a new file" bw
 \usepackage{amsmath, amsthm, amssymb}
 \usepackage{graphicx}
 \graphicspath{ {./} }
+\usepackage{tikz}
+\newcommand{\cir}[1]{\tikz[baseline]{%
+    \node[anchor=base, draw, circle, inner sep=0, minimum width=1.2em]{#1};}}
 
 \begin{document}
 
